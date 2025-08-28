@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block title %}Servicios - SPORT MAX{% endblock %}
+
+{% block content %}
+<div class="container">
+    <!-- Header Section -->
+    <div class="text-center mb-5">
+        <h1 class="hero-title text-danger">Nuestros Servicios</h1>
+        <p class="lead">Descubre todo lo que SPORT MAX tiene para ofrecerte</p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="row">
+        <!-- Service 1 -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-sport h-100">
+                <div class="card-header-sport text-center">
+                    <i class="fas fa-tv fa-3x mb-3"></i>
+                    <h4>TRANSMISIONES EN VIVO</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="text-danger">⚽ Partidos en Directo</h5>
+                    <p>Disfruta de los mejores partidos de fútbol, baloncesto y más deportes en tiempo real.</p>
+                    <ul class="list-unstyled">
+                        <li>✔️ Liga Premier</li>
+                        <li>✔️ LaLiga</li>
+                        <li>✔️ NBA</li>
+                        <li>✔️ UFC</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-sport h-100">
+                <div class="card-header-sport text-center">
+                    <i class="fas fa-film fa-3x mb-3"></i>
+                    <h4>CONTENIDO EXCLUSIVO</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="text-danger">🎬 Series y Películas</h5>
+                    <p>Acceso a contenido exclusivo que no encontrarás en ninguna otra plataforma.</p>
+                    <ul class="list-unstyled">
+                        <li>✔️ Documentales Deportivos</li>
+                        <li>✔️ Series Originales</li>
+                        <li>✔️ Películas Exclusivas</li>
+                        <li>✔️ Contenido 4K</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="col-md-4 mb-4">
+            <div class="card card-sport h-100">
+                <div class="card-header-sport text-center">
+                    <i class="fas fa-mobile-alt fa-3x mb-3"></i>
+                    <h4>APP MÓVIL</h4>
+                </div>
+                <div class="card-body text-center">
+                    <h5 class="text-danger">📱 Multiplataforma</h5>
+                    <p>Disfruta de nuestro contenido en cualquier dispositivo, en cualquier momento.</p>
+                    <ul class="list-unstyled">
+                        <li>✔️ iOS y Android</li>
+                        <li>✔️ Smart TV</li>
+                        <li>✔️ Web Player</li>
+                        <li>✔️ Descargas Offline</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <div class="row mt-5">
+        <div class="col-lg-8 mx-auto">
+            <div class="card card-sport">
+                <div class="card-header-sport text-center">
+                    <h3><i class="fas fa-tags me-2"></i>Planes y Precios</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 border rounded">
+                                <h4 class="text-danger">BÁSICO</h4>
+                                <h2>$9.99/mes</h2>
+                                <p>✔️ 1 dispositivo</p>
+                                <p>✔️ Calidad HD</p>
+                                <p>❌ Contenido exclusivo</p>
+                                <a href="{{ url_for('contacto') }}" class="btn btn-sport">Suscribirse</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 border rounded bg-light">
+                                <h4 class="text-danger">PREMIUM</h4>
+                                <h2>$19.99/mes</h2>
+                                <p>✔️ 4 dispositivos</p>
+                                <p>✔️ Calidad 4K</p>
+                                <p>✔️ Contenido exclusivo</p>
+                                <a href="{{ url_for('contacto') }}" class="btn btn-sport">Suscribirse</a>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-3">
+                            <div class="p-3 border rounded">
+                                <h4 class="text-danger">FAMILIAR</h4>
+                                <h2>$29.99/mes</h2>
+                                <p>✔️ 6 dispositivos</p>
+                                <p>✔️ Calidad 4K</p>
+                                <p>✔️ Contenido exclusivo</p>
+                                <a href="{{ url_for('contacto') }}" class="btn btn-sport">Suscribirse</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <div class="text-center mt-5">
+        <h3>¿Tienes dudas sobre nuestros servicios?</h3>
+        <p class="lead">Contáctanos y te ayudaremos a elegir el plan perfecto para ti</p>
+        <a href="{{ url_for('contacto') }}" class="btn btn-sport btn-lg">
+            <i class="fas fa-envelope me-2"></i>Contactar Ahora
+        </a>
+    </div>
+</div>
+{% endblock %}

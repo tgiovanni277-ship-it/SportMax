@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-5 text-center">SPORT MAX</h1>
+    <p class="text-center lead">Déjanos tu mensaje:</p>
+
+    <form method="POST" action="{{ url_for('contacto') }}" class="mt-4" style="max-width: 600px; margin: auto;">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre *</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Tu nombre completo" required>
+        </div>
+        
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico *</label>
+            <input type="email" name="correo" class="form-control" id="correo" placeholder="tu@email.com" required>
+        </div>
+
+        <!-- NUEVOS CAMPOS (AHORA OBLIGATORIOS) -->
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label for="celular" class="form-label">Celular *</label>
+                <input type="number" name="celular" class="form-control" id="celular" 
+                       placeholder="3001234567" min="3000000000" max="3999999999" required>
+                <div class="form-text">Ej: 3001234567 (10 dígitos, debe comenzar con 3)</div>
+            </div>
+            <div class="col-md-6 mb-3">
+                <label for="edad" class="form-label">Edad *</label>
+                <input type="number" name="edad" class="form-control" id="edad" 
+                       placeholder="25" min="1" max="120" required>
+                <div class="form-text">Entre 1 y 120 años</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje *</label>
+            <textarea name="mensaje" class="form-control" id="mensaje" rows="4" 
+                      placeholder="Escribe tu mensaje aquí..." required></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+        <p class="text-muted mt-2 text-center"><small>* Campos obligatorios</small></p>
+    </form>
+
+    {% if enviado %}
+        <div class="alert alert-success mt-3 text-center">
+            ¡Gracias {{ nombre }}! Tu mensaje ha sido enviado con éxito.
+        </div>
+    {% endif %}
+</div>
+    
+{% endblock %}

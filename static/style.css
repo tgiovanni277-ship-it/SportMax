@@ -1,0 +1,239 @@
+/* ===== VARIABLES DE COLOR ===== */
+
+:root {
+    --color-bg: #1f2937;
+    /* Fondo gris oscuro elegante */
+    --color-bg-card: #1e3a8a;
+    /* Azul profundo para tarjetas */
+    --color-primary: #3b82f6;
+    /* Azul brillante moderno */
+    --color-primary-dark: #c32323;
+    /* Azul intenso para hover/bordes */
+    --color-accent: #06b6d4;
+    /* Cyan vibrante como acento */
+    --color-text: #f9fafb;
+    /* Texto principal claro */
+    --color-text-muted: #94a3b8;
+}
+
+
+/* ===== ESTILOS GENERALES ===== */
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+main {
+    flex: 1;
+}
+
+
+/* ===== NAVBAR ===== */
+
+.custom-navbar {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%) !important;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.2);
+    padding: 1rem 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: #ffffff !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.custom-navbar .nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+    font-weight: 500;
+    margin: 0 0.8rem;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.custom-navbar .nav-link.active {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
+}
+
+
+/* ===== HERO ===== */
+
+.hero-section {
+    background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.75)), url('https://images.unsplash.com/photo-1552667466-07770ae110d0?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 2rem;
+    margin-bottom: 3rem;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--color-text-muted);
+    margin-bottom: 2rem;
+}
+
+
+/* ===== BOTONES ===== */
+
+.btn-sport {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 0.8rem 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.btn-sport:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(230, 57, 70, 0.45);
+}
+
+
+/* ===== TARJETAS ===== */
+
+.card-sport {
+    border: none;
+    border-radius: 15px;
+    background: var(--color-bg-card);
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card-sport:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.card-header-sport {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+    padding: 1.2rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+/* ===== FORMULARIOS ===== */
+
+.form-sport {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.form-control-sport {
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control-sport:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 0.3rem rgba(230, 57, 70, 0.25);
+}
+
+
+/* ===== TABLAS ===== */
+
+.table-sport {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    background: var(--color-bg-card);
+    color: var(--color-text);
+}
+
+.table-sport thead {
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    color: white;
+}
+
+.table-sport th {
+    border: none;
+    padding: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* ===== ALERTAS ===== */
+
+.alert-sport {
+    border: none;
+    border-radius: 10px;
+    padding: 1.2rem 1.5rem;
+    font-weight: 500;
+    background: var(--color-bg-card);
+    color: var(--color-text);
+    border-left: 6px solid var(--color-primary);
+    box-shadow: 0 4px 15px rgba(230, 57, 70, 0.25);
+}
+
+
+/* ===== FOOTER ===== */
+
+.footer-sport {
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    color: var(--color-text-muted);
+    padding: 2.5rem 0;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.footer-sport a {
+    color: var(--color-primary);
+    transition: color 0.3s;
+}
+
+.footer-sport a:hover {
+    color: var(--color-primary-dark);
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+    .custom-navbar .nav-link {
+        margin: 0.3rem 0;
+        text-align: center;
+    }
+}
