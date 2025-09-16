@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Contacto{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="display-5 text-center">Contacto con la USTA</h1>
+    <p class="text-center lead">Déjanos tu mensaje:</p>
+
+    <form method="POST" action="{{ url_for('contacto') }}" class="mt-4" style="max-width: 600px; margin: auto;">
+        <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" name="nombre" class="form-control" id="nombre" placeholder="Nombre" required >
+        </div>
+        <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" name="correo" class="form-control" id="correo" placeholder="tu@usta.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="mensaje" class="form-label">Mensaje</label>
+            <textarea name="mensaje" class="form-control" id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+
+    {% if enviado %}
+        <div class="alert alert-success mt-3 text-center">
+            ¡Gracias {{ nombre }}! Tu mensaje ha sido enviado con éxito.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}
